@@ -11,12 +11,19 @@ public class MathRotate : MonoBehaviour
 
 void Update()
     {
-    timer += Time.deltaTime; //add time to timer on every frame
+    if (timer<30){
+        timer += Time.deltaTime;
+        } //add time to timer on every frame
     
-    transform.position = new Vector3( //apply circlular movement to object 
+    if (timer>100){
+        timer -= Time.deltaTime;
+
+        } //add time to timer on every frame
+    transform.position = new Vector3( //apply circular movement to object 
                     Mathf.Cos(timer * freq) * amp,  //use cos for the x-axis
                     Mathf.Sin(timer * freq) * amp,  //use sin for the y-axis
                     0);
-     
+    
+    
     }
 }

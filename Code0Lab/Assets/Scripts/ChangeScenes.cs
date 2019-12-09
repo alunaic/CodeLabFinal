@@ -10,10 +10,9 @@ public class ChangeScenes : MonoBehaviour
     {
         SceneSwitch();
         Debug.Log ("go to ending");
-        
-                // got to scene 2
+               
     }
-    public void SceneSwitch () {
+    public void SceneSwitch () { // got to scene 2
         SceneManager.LoadScene (SceneName);
         }
 }
